@@ -57,6 +57,7 @@ public class AuthService {
         String refreshToken = jwtUtil.generateRefreshToken(userDetails);
 
         return new AuthResponse(
+                user.getId(),
                 token,
                 refreshToken,
                 user.getEmail(),
@@ -87,6 +88,7 @@ public class AuthService {
         String refreshToken = jwtUtil.generateRefreshToken(userDetails);
 
         return new AuthResponse(
+                user.getId(),
                 token,
                 refreshToken,
                 user.getEmail(),
@@ -110,6 +112,7 @@ public class AuthService {
         String newRefreshToken = jwtUtil.generateRefreshToken(userDetails);
 
         return new AuthResponse(
+                user.getId(),
                 newToken,
                 newRefreshToken,
                 user.getEmail(),

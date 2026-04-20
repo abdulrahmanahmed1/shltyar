@@ -7,6 +7,7 @@ import com.twintech.shl_tyar.dto.DriverUpdateRequest;
 import com.twintech.shl_tyar.service.AdminService;
 import com.twintech.shl_tyar.service.DriverService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -33,28 +34,28 @@ public class AdminManagementController {
     }
 
     @GetMapping("/drivers")
-    @Operation(summary = "Get all drivers")
+    @Operation(summary = "Get all drivers", security = @SecurityRequirement(name = "Bearer Authentication"))
     public ResponseEntity<List<DriverResponse>> getAllDrivers() {
         List<DriverResponse> drivers = driverService.getAllDrivers();
         return ResponseEntity.ok(drivers);
     }
 
     @GetMapping("/drivers/{id}")
-    @Operation(summary = "Get driver by ID")
+    @Operation(summary = "Get driver by ID", security = @SecurityRequirement(name = "Bearer Authentication"))
     public ResponseEntity<DriverResponse> getDriverById(@PathVariable Long id) {
         DriverResponse driver = driverService.getDriverById(id);
         return ResponseEntity.ok(driver);
     }
 
     @GetMapping("/drivers/email/{email}")
-    @Operation(summary = "Get driver by email")
+    @Operation(summary = "Get driver by email", security = @SecurityRequirement(name = "Bearer Authentication"))
     public ResponseEntity<DriverResponse> getDriverByEmail(@PathVariable String email) {
         DriverResponse driver = driverService.getDriverByEmail(email);
         return ResponseEntity.ok(driver);
     }
 
     @PutMapping("/drivers/{id}")
-    @Operation(summary = "Update driver information")
+    @Operation(summary = "Update driver information", security = @SecurityRequirement(name = "Bearer Authentication"))
     public ResponseEntity<DriverResponse> updateDriver(
             @PathVariable Long id,
             @RequestBody DriverUpdateRequest request) {
@@ -63,14 +64,14 @@ public class AdminManagementController {
     }
 
     @DeleteMapping("/drivers/{id}")
-    @Operation(summary = "Soft delete driver")
+    @Operation(summary = "Soft delete driver", security = @SecurityRequirement(name = "Bearer Authentication"))
     public ResponseEntity<Map<String, String>> deleteDriver(@PathVariable Long id) {
         driverService.deleteDriver(id);
         return ResponseEntity.ok(Map.of("message", "Driver deleted successfully"));
     }
 
     @DeleteMapping("/drivers/{id}/permanent")
-    @Operation(summary = "Permanently delete driver")
+    @Operation(summary = "Permanently delete driver", security = @SecurityRequirement(name = "Bearer Authentication"))
     public ResponseEntity<Map<String, String>> hardDeleteDriver(@PathVariable Long id) {
         driverService.hardDeleteDriver(id);
         return ResponseEntity.ok(Map.of("message", "Driver permanently deleted"));

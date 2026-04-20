@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 @Data
 public class DriverApplicationResponse {
     private Long id;
+    private Long userId;
     private String name;
     private String email;
     private LocalDate birthDate;

@@ -180,6 +180,7 @@ public class DriverApplicationService {
     private DriverApplicationResponse mapToResponse(DriverApplication application) {
         DriverApplicationResponse response = new DriverApplicationResponse();
         response.setId(application.getId());
+        response.setUserId(application.getUser().getId());
         response.setName(application.getUser().getFullName());
         response.setEmail(application.getUser().getEmail());
         response.setBirthDate(application.getUser().getBirthDate());

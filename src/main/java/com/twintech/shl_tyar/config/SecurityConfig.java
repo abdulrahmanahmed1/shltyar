@@ -44,18 +44,19 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authz -> authz
+                        // Swagger UI endpoints (must be first)
+                        .requestMatchers("/swagger-ui/**", "/swagger-ui.html").permitAll()
+                        .requestMatchers("/v3/api-docs/**", "/api-docs/**").permitAll()
+                        .requestMatchers("/actuator/**").permitAll()
                         // Public endpoints
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/sales/register").permitAll() // Allow public sales registration
                         .requestMatchers("/api/admin/register").permitAll() // Allow public admin registration
                         .requestMatchers("/driver-application.html", "/login.html").permitAll()
-                        .requestMatchers("/api/driver/application").permitAll() // Allow public driver application submission
-                        // Swagger UI endpoints
-                        .requestMatchers("/swagger-ui/**", "/api-docs/**", "/swagger-ui.html", "/v3/api-docs/**").permitAll()
-                        .requestMatchers("/actuator/**").permitAll()
-                        // Driver endpoints
+                        .requestMatchers("/api/driver/application").permitAll() // Allow public driver application submission (POST only)
+                        // Driver endpoints (authenticated)
                         .requestMatchers("/api/driver/**").hasRole("DRIVER")
-                        // Admin endpoints
+                        // Admin endpoints (authenticated)
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
                         // All other requests need authentication
                         .anyRequest().authenticated()

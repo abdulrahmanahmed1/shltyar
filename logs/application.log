@@ -13221,3 +13221,2818 @@ java.lang.RuntimeException: User already exists with email: admin@example.com
 2026-04-19 13:30:04 [http-nio-8081-exec-8] INFO  o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0,"i_ll":1770730617470,"i_e":{"enable_itp_optimization":0}};] that contained an invalid cookie. That cookie will be ignored.
  Note: further occurrences of this error will be logged at DEBUG level.
 2026-04-19 13:30:06 [http-nio-8081-exec-7] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 648 ms
+2026-04-19 13:45:48 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:45:48 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    /* insert 
+    for
+        com.twintech.shl_tyar.domain.User
+        */insert 
+    into
+        users (birth_date, created_at, deleted_at, email, email_verified, full_name, last_login_at, password_hash, phone, role, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-04-19 13:45:48 [http-nio-8081-exec-3] INFO  c.t.shl_tyar.service.AdminService - Admin account created successfully for email: admin@admin.com
+2026-04-19 13:46:19 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:46:20 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:46:20 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:46:20 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    /* update
+        
+    for
+        com.twintech.shl_tyar.domain.User */update users 
+    set
+        birth_date=?,
+        deleted_at=?,
+        email=?,
+        email_verified=?,
+        full_name=?,
+        last_login_at=?,
+        password_hash=?,
+        phone=?,
+        role=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-04-19 13:51:18 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:51:18 [http-nio-8081-exec-6] ERROR c.t.s.e.GlobalExceptionHandler - Runtime exception: 
+java.lang.RuntimeException: Login failed: Bad credentials
+	at com.twintech.shl_tyar.controller.AuthController.login(AuthController.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at com.twintech.shl_tyar.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:54)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-19 13:51:37 [http-nio-8081-exec-1] ERROR c.t.s.e.GlobalExceptionHandler - Unexpected exception: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource v3/api-docs for request '/v3/api-docs'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at com.twintech.shl_tyar.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:54)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-19 13:52:33 [main] INFO  c.t.shl_tyar.ShlTyarApplication - Starting ShlTyarApplication using Java 21.0.9 with PID 2712 (C:\Users\Twin-Tech\Desktop\shltyar\target\classes started by Twin-Tech in C:\Users\Twin-Tech\Desktop\shltyar)
+2026-04-19 13:52:33 [main] DEBUG c.t.shl_tyar.ShlTyarApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-19 13:52:33 [main] INFO  c.t.shl_tyar.ShlTyarApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 13:52:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 13:52:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-19 13:52:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 266 ms. Found 8 JPA repository interfaces.
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DeliveryAreaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DeliveryPriceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DriverApplicationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DriverDocumentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.RestaurantBranchRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.RestaurantRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 13:52:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2026-04-19 13:52:36 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-04-19 13:52:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 13:52:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-04-19 13:52:36 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2969 ms
+2026-04-19 13:52:36 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-19 13:52:36 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-04-19 13:52:37 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-19 13:52:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-19 13:52:37 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c7cf8c4
+2026-04-19 13:52:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-19 13:52:37 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-19 13:52:37 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/shl_tyar_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: shl_tyar_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-19 13:52:39 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-19 13:52:39 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-04-19 13:52:39 [main] DEBUG org.hibernate.SQL - 
+    alter table driver_applications 
+       modify column status enum ('APPROVED','PENDING','REJECTED') not null
+2026-04-19 13:52:39 [main] DEBUG org.hibernate.SQL - 
+    alter table driver_documents 
+       modify column document_type enum ('DRIVER_LICENSE','MOTORCYCLE_LICENSE','MOTORCYCLE_PHOTO','NATIONAL_ID') not null
+2026-04-19 13:52:39 [main] DEBUG org.hibernate.SQL - 
+    alter table restaurants 
+       modify column restaurant_type enum ('BRAND','SINGLE_BRANCH') not null
+2026-04-19 13:52:39 [main] DEBUG org.hibernate.SQL - 
+    alter table restaurants 
+       modify column status enum ('ACTIVE','LOCKED','SUSPENDED') not null
+2026-04-19 13:52:39 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column role enum ('ADMIN','DRIVER','RESTAURANT','SALES') not null
+2026-04-19 13:52:39 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column status enum ('ACTIVE','LOCKED','SUSPENDED') not null
+2026-04-19 13:52:39 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-19 13:52:39 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-19 13:52:40 [main] DEBUG c.t.s.config.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-04-19 13:52:40 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-04-19 13:52:40 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-19 13:52:43 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-04-19 13:52:43 [main] INFO  c.t.shl_tyar.ShlTyarApplication - Started ShlTyarApplication in 10.948 seconds (process running for 11.595)
+2026-04-19 13:52:50 [http-nio-8081-exec-1] INFO  o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0,"i_ll":1770730617470,"i_e":{"enable_itp_optimization":0}};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2026-04-19 13:52:50 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 13:52:50 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 13:52:50 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-04-19 13:52:51 [http-nio-8081-exec-7] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 619 ms
+2026-04-19 13:53:19 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:53:19 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        da1_0.id,
+        da1_0.address,
+        da1_0.created_at,
+        da1_0.deleted_at,
+        da1_0.driver_license_expiry,
+        da1_0.driver_license_number,
+        da1_0.emergency_contact_name,
+        da1_0.emergency_contact_phone,
+        da1_0.motorcycle_license_expiry,
+        da1_0.motorcycle_license_number,
+        da1_0.motorcycle_plate_number,
+        da1_0.national_id,
+        da1_0.rejection_reason,
+        da1_0.reviewed_at,
+        da1_0.reviewed_by,
+        da1_0.status,
+        da1_0.updated_at,
+        da1_0.user_id 
+    from
+        driver_applications da1_0
+2026-04-19 13:53:31 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:53:31 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 13:54:55 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:54:55 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:34 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:34 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:35 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:35 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:35 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:36 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:37 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:37 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:37 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:37 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:37 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:37 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:37 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:37 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:38 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:39 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:39 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:39 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:39 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 13:59:39 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 14:00:40 [main] INFO  c.t.shl_tyar.ShlTyarApplication - Starting ShlTyarApplication using Java 21.0.9 with PID 23264 (C:\Users\Twin-Tech\Desktop\shltyar\target\classes started by Twin-Tech in C:\Users\Twin-Tech\Desktop\shltyar)
+2026-04-19 14:00:40 [main] DEBUG c.t.shl_tyar.ShlTyarApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-19 14:00:40 [main] INFO  c.t.shl_tyar.ShlTyarApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 239 ms. Found 8 JPA repository interfaces.
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DeliveryAreaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DeliveryPriceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DriverApplicationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DriverDocumentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.RestaurantBranchRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.RestaurantRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 14:00:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2026-04-19 14:00:43 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-04-19 14:00:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 14:00:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-04-19 14:00:43 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2932 ms
+2026-04-19 14:00:43 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-19 14:00:43 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-04-19 14:00:44 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-19 14:00:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-19 14:00:44 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f32ab17
+2026-04-19 14:00:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-19 14:00:45 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-19 14:00:45 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/shl_tyar_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: shl_tyar_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-19 14:00:46 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-19 14:00:46 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-04-19 14:00:46 [main] DEBUG org.hibernate.SQL - 
+    alter table driver_applications 
+       modify column status enum ('APPROVED','PENDING','REJECTED') not null
+2026-04-19 14:00:46 [main] DEBUG org.hibernate.SQL - 
+    alter table driver_documents 
+       modify column document_type enum ('DRIVER_LICENSE','MOTORCYCLE_LICENSE','MOTORCYCLE_PHOTO','NATIONAL_ID') not null
+2026-04-19 14:00:46 [main] DEBUG org.hibernate.SQL - 
+    alter table restaurants 
+       modify column restaurant_type enum ('BRAND','SINGLE_BRANCH') not null
+2026-04-19 14:00:46 [main] DEBUG org.hibernate.SQL - 
+    alter table restaurants 
+       modify column status enum ('ACTIVE','LOCKED','SUSPENDED') not null
+2026-04-19 14:00:46 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column role enum ('ADMIN','DRIVER','RESTAURANT','SALES') not null
+2026-04-19 14:00:47 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column status enum ('ACTIVE','LOCKED','SUSPENDED') not null
+2026-04-19 14:00:47 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-19 14:00:47 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-19 14:00:47 [main] DEBUG c.t.s.config.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-04-19 14:00:47 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-04-19 14:00:47 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-19 14:00:50 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-04-19 14:00:50 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-19 14:00:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-19 14:00:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-19 14:00:50 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-19 14:00:50 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-04-19 15:00:05 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:05 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:06 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:06 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:06 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:06 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:11 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-19 15:00:11 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-19 15:00:11 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-19 15:00:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-19 15:00:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-19 15:00:33 [main] INFO  c.t.shl_tyar.ShlTyarApplication - Starting ShlTyarApplication using Java 21.0.9 with PID 8472 (C:\Users\Twin-Tech\Desktop\shltyar\target\classes started by Twin-Tech in C:\Users\Twin-Tech\Desktop\shltyar)
+2026-04-19 15:00:33 [main] DEBUG c.t.shl_tyar.ShlTyarApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-19 15:00:33 [main] INFO  c.t.shl_tyar.ShlTyarApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 231 ms. Found 8 JPA repository interfaces.
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DeliveryAreaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DeliveryPriceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DriverApplicationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DriverDocumentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.RestaurantBranchRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.RestaurantRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:00:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2026-04-19 15:00:36 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-04-19 15:00:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 15:00:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-04-19 15:00:36 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2726 ms
+2026-04-19 15:00:36 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-19 15:00:37 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-04-19 15:00:37 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-19 15:00:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-19 15:00:37 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fe9c048
+2026-04-19 15:00:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-19 15:00:38 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-19 15:00:38 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/shl_tyar_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: shl_tyar_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-19 15:00:39 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-19 15:00:39 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-04-19 15:00:39 [main] DEBUG org.hibernate.SQL - 
+    alter table driver_applications 
+       modify column status enum ('APPROVED','PENDING','REJECTED') not null
+2026-04-19 15:00:39 [main] DEBUG org.hibernate.SQL - 
+    alter table driver_documents 
+       modify column document_type enum ('DRIVER_LICENSE','MOTORCYCLE_LICENSE','MOTORCYCLE_PHOTO','NATIONAL_ID') not null
+2026-04-19 15:00:39 [main] DEBUG org.hibernate.SQL - 
+    alter table restaurants 
+       modify column restaurant_type enum ('BRAND','SINGLE_BRANCH') not null
+2026-04-19 15:00:39 [main] DEBUG org.hibernate.SQL - 
+    alter table restaurants 
+       modify column status enum ('ACTIVE','LOCKED','SUSPENDED') not null
+2026-04-19 15:00:39 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column role enum ('ADMIN','DRIVER','RESTAURANT','SALES') not null
+2026-04-19 15:00:39 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column status enum ('ACTIVE','LOCKED','SUSPENDED') not null
+2026-04-19 15:00:39 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-19 15:00:40 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-19 15:00:40 [main] DEBUG c.t.s.config.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-04-19 15:00:40 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-04-19 15:00:40 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-19 15:00:43 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-04-19 15:00:43 [main] INFO  c.t.shl_tyar.ShlTyarApplication - Started ShlTyarApplication in 10.024 seconds (process running for 10.605)
+2026-04-19 15:00:51 [http-nio-8081-exec-1] INFO  o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0,"i_ll":1770730617470,"i_e":{"enable_itp_optimization":0}};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2026-04-19 15:00:51 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 15:00:51 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 15:00:51 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2026-04-19 15:00:52 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:52 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 15:00:57 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:57 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 15:00:57 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:58 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 15:00:58 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:00:58 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 15:03:13 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-19 15:03:13 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-19 15:03:13 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-19 15:03:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-19 15:03:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-19 15:05:37 [main] INFO  c.t.shl_tyar.ShlTyarApplication - Starting ShlTyarApplication using Java 21.0.9 with PID 23424 (C:\Users\Twin-Tech\Desktop\shltyar\target\classes started by Twin-Tech in C:\Users\Twin-Tech\Desktop\shltyar)
+2026-04-19 15:05:37 [main] DEBUG c.t.shl_tyar.ShlTyarApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-04-19 15:05:37 [main] INFO  c.t.shl_tyar.ShlTyarApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 15:05:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 15:05:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 262 ms. Found 8 JPA repository interfaces.
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DeliveryAreaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DeliveryPriceRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DriverApplicationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.DriverDocumentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.RestaurantBranchRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.RestaurantRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.twintech.shl_tyar.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-04-19 15:05:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2026-04-19 15:05:40 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-04-19 15:05:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 15:05:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-04-19 15:05:40 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2984 ms
+2026-04-19 15:05:40 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-19 15:05:40 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-04-19 15:05:41 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-19 15:05:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-19 15:05:41 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f32ab17
+2026-04-19 15:05:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-19 15:05:41 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-19 15:05:41 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/shl_tyar_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: shl_tyar_db/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-19 15:05:43 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-19 15:05:43 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-04-19 15:05:43 [main] DEBUG org.hibernate.SQL - 
+    alter table driver_applications 
+       modify column status enum ('APPROVED','PENDING','REJECTED') not null
+2026-04-19 15:05:43 [main] DEBUG org.hibernate.SQL - 
+    alter table driver_documents 
+       modify column document_type enum ('DRIVER_LICENSE','MOTORCYCLE_LICENSE','MOTORCYCLE_PHOTO','NATIONAL_ID') not null
+2026-04-19 15:05:43 [main] DEBUG org.hibernate.SQL - 
+    alter table restaurants 
+       modify column restaurant_type enum ('BRAND','SINGLE_BRANCH') not null
+2026-04-19 15:05:43 [main] DEBUG org.hibernate.SQL - 
+    alter table restaurants 
+       modify column status enum ('ACTIVE','LOCKED','SUSPENDED') not null
+2026-04-19 15:05:43 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column role enum ('ADMIN','DRIVER','RESTAURANT','SALES') not null
+2026-04-19 15:05:43 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column status enum ('ACTIVE','LOCKED','SUSPENDED') not null
+2026-04-19 15:05:43 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-19 15:05:43 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-19 15:05:44 [main] DEBUG c.t.s.config.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-04-19 15:05:44 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-04-19 15:05:44 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-19 15:05:47 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-04-19 15:05:47 [main] INFO  c.t.shl_tyar.ShlTyarApplication - Started ShlTyarApplication in 10.991 seconds (process running for 11.604)
+2026-04-19 15:05:47 [http-nio-8081-exec-1] INFO  o.a.tomcat.util.http.parser.Cookie - A cookie header was received [g_state={"i_l":0,"i_ll":1770730617470,"i_e":{"enable_itp_optimization":0}};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2026-04-19 15:05:47 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 15:05:47 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 15:05:47 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-04-19 15:05:48 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:05:48 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 15:05:49 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:05:49 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 15:05:50 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:05:50 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 15:05:50 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:05:50 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 15:05:51 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:05:51 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 15:06:06 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:06:06 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.birth_date,
+        u1_0.created_at,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.email_verified,
+        u1_0.full_name,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-04-19 15:06:19 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:06:19 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.birth_date,
+        u1_0.created_at,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.email_verified,
+        u1_0.full_name,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-04-19 15:06:19 [http-nio-8081-exec-2] INFO  c.t.shl_tyar.service.DriverService - Driver soft deleted: test@example.com
+2026-04-19 15:06:19 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    /* update
+        
+    for
+        com.twintech.shl_tyar.domain.User */update users 
+    set
+        birth_date=?,
+        deleted_at=?,
+        email=?,
+        email_verified=?,
+        full_name=?,
+        last_login_at=?,
+        password_hash=?,
+        phone=?,
+        role=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-04-19 15:06:29 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:06:29 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.birth_date,
+        u1_0.created_at,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.email_verified,
+        u1_0.full_name,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-04-19 15:06:29 [http-nio-8081-exec-8] INFO  c.t.shl_tyar.service.DriverService - Driver permanently deleted: test@example.com
+2026-04-19 15:06:29 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    /* delete 
+    for
+        com.twintech.shl_tyar.domain.User */delete 
+    from
+        users 
+    where
+        id=?
+2026-04-19 15:06:35 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:06:35 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.birth_date,
+        u1_0.created_at,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.email_verified,
+        u1_0.full_name,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-04-19 15:06:37 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:06:37 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.birth_date,
+        u1_0.created_at,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.email_verified,
+        u1_0.full_name,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-04-19 15:06:37 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:06:37 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.birth_date,
+        u1_0.created_at,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.email_verified,
+        u1_0.full_name,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-04-19 15:06:43 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:06:43 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.birth_date,
+        u1_0.created_at,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.email_verified,
+        u1_0.full_name,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-04-19 15:06:43 [http-nio-8081-exec-6] ERROR c.t.s.e.GlobalExceptionHandler - Runtime exception: 
+java.lang.RuntimeException: Driver not found with id: 1
+	at com.twintech.shl_tyar.service.DriverService.lambda$getDriverById$0(DriverService.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.twintech.shl_tyar.service.DriverService.getDriverById(DriverService.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715)
+	at com.twintech.shl_tyar.service.DriverService$$SpringCGLIB$$0.getDriverById(<generated>)
+	at com.twintech.shl_tyar.controller.AdminManagementController.getDriverById(AdminManagementController.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at com.twintech.shl_tyar.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:54)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-19 15:06:45 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:06:45 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.birth_date,
+        u1_0.created_at,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.email_verified,
+        u1_0.full_name,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-04-19 15:06:45 [http-nio-8081-exec-5] ERROR c.t.s.e.GlobalExceptionHandler - Runtime exception: 
+java.lang.RuntimeException: Driver not found with id: 1
+	at com.twintech.shl_tyar.service.DriverService.lambda$getDriverById$0(DriverService.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.twintech.shl_tyar.service.DriverService.getDriverById(DriverService.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715)
+	at com.twintech.shl_tyar.service.DriverService$$SpringCGLIB$$0.getDriverById(<generated>)
+	at com.twintech.shl_tyar.controller.AdminManagementController.getDriverById(AdminManagementController.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at com.twintech.shl_tyar.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:54)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-19 15:06:54 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.email = :email */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.email=?
+2026-04-19 15:06:54 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        u 
+    FROM
+        User u 
+    WHERE
+        u.role = :role */ select
+            u1_0.id,
+            u1_0.birth_date,
+            u1_0.created_at,
+            u1_0.deleted_at,
+            u1_0.email,
+            u1_0.email_verified,
+            u1_0.full_name,
+            u1_0.last_login_at,
+            u1_0.password_hash,
+            u1_0.phone,
+            u1_0.role,
+            u1_0.status,
+            u1_0.updated_at 
+        from
+            users u1_0 
+        where
+            u1_0.role=?
+2026-04-19 15:21:06 [http-nio-8081-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 530 ms
